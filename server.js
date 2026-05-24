@@ -1,3 +1,4 @@
+console.error("BLAD TESTOWY - celowy error");
 const express = require('express');
 const { Pool } = require('pg');
 const { createClient } = require('redis');
