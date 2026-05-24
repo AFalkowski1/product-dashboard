@@ -21,5 +21,5 @@ test('GET /stats zwraca obiekt z count i cache_hits', () => {
   assert.ok('count' in stats);
   assert.ok('cache_hits' in stats);
   assert.strictEqual(typeof stats.count, 'number');
-  assert.strictEqual(typeof stats.cache_hits, 'string'); // celowy blad
+  assert.strictEqual(typeof stats.cache_hits, 'number');
 });
