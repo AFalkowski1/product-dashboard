@@ -1,4 +1,3 @@
-console.error("BLAD TESTOWY - celowy error");
 const express = require('express');
 const { Pool } = require('pg');
 const { createClient } = require('redis');
@@ -70,6 +69,8 @@ app.get('/stats', async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+
+app.get('/health', (req, res) => res.json({ status: 'ok' }));
 
 init()
   .then(() => app.listen(3000, () => console.log('Server listening on port 3000')))
